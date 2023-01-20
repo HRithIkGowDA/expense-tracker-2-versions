@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>EXPENSE TRACKER WITH CRUD</title>
+  </head>
+  <body style="color:white; text-align: center; border: 0px; border-radius: 2px; background-image:url('mm.png'); background-repeat: no-repeat; background-size: cover; ">
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <a class="navbar-brand" href="#" style="border-radius: 2px; color: rgb(255, 0, 0);">MONEY MANAGEMENT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: rgb(255, 0, 0);" >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="border-radius: 2px; color: rgb(251, 255, 0);">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border-radius: 2px; color: rgb(251, 255, 0);" >Github</a>
+          </li>
+         
+          
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+
+    <br>
+    <form onsubmit="saveToLocalStorage(event)">
+      <label style="color: black;" >Enter Your Amount : </label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        size="15"
+        placeholder="Enter Amount"
+        required
+      />
+      <label style="color: black;" > Description : </label>
+      <input
+        type="text"
+        id="description"
+        name="description"
+        size="15"
+        placeholder="Enter Description"
+        required
+      />
+      <label style="color: black;" > Select a category : </label>
+      <select
+        name="category"
+        id="category"
+        size="1"
+        placeholder="Enter Category"
+        required
+      >
+        <option>Movie</option>
+        <option>Food</option>
+        <option>Electricity</option>
+        <option>Travel</option>
+        <option>Fuel</option>
+        <option>Gym</option>
+      </select>
+      <button  >Add Expense</button>
+    </form>
+    <ul id="listOfExpenses"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
